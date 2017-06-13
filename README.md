@@ -14,6 +14,7 @@ Search for url's on Google
 * Change User-Agent
 * Save in sqlite3 db with Site title, Description and Cache Page
 * Remove (or make like) ads
+
 Search Engines to add
 * Bing
 * Yahoo
