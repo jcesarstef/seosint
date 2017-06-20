@@ -1,4 +1,16 @@
 # seOSINT
+```
+
+                             _____         _____ 
+_____________ ______ ___________(_)_______ __  /_
+__  ___/_  _ \_  __ \__  ___/__  / __  __ \_  __/
+_(__  ) /  __// /_/ /_(__  ) _  /  _  / / // /_  
+/____/  \___/ \____/ /____/  /_/   /_/ /_/ \__/  
+                                                 
+Search Engine Open Source Intelligence
+created by @jcesarstef
+```
+
 ### Search Engine Open Source Intelligence
 A lot of internal URLs of websites are indexed without the knowledge of Developer or SEO. And during an web security assessment sounds ridiculous to spend the day clicking from page to page on Google search looking for something relevant (aka leak).
 
