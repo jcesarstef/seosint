@@ -30,7 +30,7 @@ Search Engines to add
 
 #### Use Example
 ```bash
-$ sh seosint.sh www.topseos.com
+$ sh seosint.sh site:www.topseos.com
 https://www.topseos.com/
 https://www.topseos.com/downloads/
 https://www.topseos.com/profile/boostability/
