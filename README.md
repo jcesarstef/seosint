@@ -1,4 +1,3 @@
-# seOSINT
 ```
                              _____         _____ 
 _____________ ______ ___________(_)_______ __  /_
@@ -10,7 +9,7 @@ Search Engine Open Source Intelligence
 created by @jcesarstef
 ```
 
-### Search Engine Open Source Intelligence
+### seosint - Search Engine Open Source Intelligence
 A lot of internal URLs of websites are indexed without the knowledge of Developer or SEO. And during an web security assessment sounds ridiculous to spend the day clicking from page to page on Google search looking for something relevant (aka leak).
 
 Based on the premise that something repetitive must be automated, I'm working in seosint, an Open Source Intelligence tool focused on automating the search for holes in Search Engine Optimization projects.
