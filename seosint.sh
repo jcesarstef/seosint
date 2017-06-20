@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Google search start point
+# 0 is the first occurrence
+
 echo "\
                              _____         _____ 
 _____________ ______ ___________(_)_______ __  /_
@@ -9,7 +12,7 @@ _(__  ) /  __// /_/ /_(__  ) _  /  _  / / // /_
                                                  
 Search Engine Open Source Intelligence
 created by @jcesarstef
-version 0.4.1
+version 0.4.2
 "
 query=$(echo $1|sed -e 's\ \+\g')
 if [ -z $query ]; then
@@ -29,9 +32,8 @@ domains="www.google.com|www.google.ac|www.google.com.om|www.google.ad|www.google
 
 #List most common User Agent's
 useragents="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36|Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36|Mozilla/5.0 (Windows NT 6.3; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0|4Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36|Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/603.2.4 (KHTML, like Gecko) Version/10.1.1 Safari/603.2.4|Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0|Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36|Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36|Mozilla/5.0 (Windows NT 6.1; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0|Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36|Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:53.0) Gecko/20100101 Firefox/53.0|Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36|Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36c"
-blocked=0
-start=0
-more=1|sed -e 's\ \+\g'
+blocked="0"
+start="0"
 
 domain=$(echo $domains | tr "|" "\n" | sort -R | head -1)
 useragent=$(echo $useragents | tr "|" "\n" | sort -R | head -1)
@@ -39,7 +41,7 @@ echo "Using $domain"
 
 #mkdir tmp 2> /dev/null
 more="1"
-n=1
+n="1"
 while [ "$more" -eq "1" ]
 do
     tmp=$(echo tmp-$query-$n.txt)
