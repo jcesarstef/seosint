@@ -6,14 +6,21 @@ Based on the premise that something repetitive must be automated, I'm working in
 
 
 #### Functions partially working:
-Search for url's on Google
+* Search for url's on Google
+* Banner
+* Switch Google Domain if reCaptcha (manual)
+* Change User-Agent (manual)
 
 #### TODO
-* Add Banner
-* Switch Google Domain if reCaptcha
-* Change User-Agent
-* Save in sqlite3 db with Site title, Description and Cache Page
-* Remove (or make like) ads
+* Save in sqlite3
+  ```
+  [req]
+  id|url|title|description|ads(i/o)|cache(i/o)|evidence_id
+
+  [evidence]
+  id|google_url|dump
+  ```
+* Remove (or alert about) ads
 
 Search Engines to add
 * Bing
