@@ -9,7 +9,7 @@ _(__  ) /  __// /_/ /_(__  ) _  /  _  / / // /_
                                                  
 Search Engine Open Source Intelligence
 created by @jcesarstef
-version 0.4
+version 0.4.1
 "
 query=$(echo $1|sed -e 's\ \+\g')
 if [ -z $query ]; then
@@ -53,4 +53,5 @@ do
         more="0"
     fi
     n=$((n+1))
+    rm $tmp
 done
